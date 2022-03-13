@@ -1,0 +1,120 @@
+
+.outerDiv{
+  margin-top: 2%;
+  border-radius: 20px;
+  background-color: rgb(250, 235, 244);
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.outerDiv2{
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+.cardImage{
+  width: 85%;
+  height:auto;
+  padding: 3%;
+  margin-top:15px;
+}
+
+.titleHeading{
+  color: #f01a81;  /* fallback for old browsers */
+  
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 12rem;
+    height: 12rem;
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+@media only screen and (max-width: 480px) {
+  .flip-card {
+    width: 9rem;
+    height: 9rem;
+  }
+  
+  .frontSideHeading{
+    font-size:large;
+  }
+  
+  .backSideHeading{
+    font-size:x-large;
+  }
+
+  .backSideType{
+    font-size:x-large;
+  }
+  
+  .titleHeading{
+    font-size:xx-large;
+  }
+}
+
+@media only screen and (max-width: 281px) {
+  .flip-card {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  .frontSideHeading{
+    font-size:large;
+  }
+
+  .backSideHeading{
+    font-size:large;
+  }
+
+  .backSideType{
+    font-size:large;
+  }
+
+  .titleHeading{
+    font-size:xx-large;
+  }
+}
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    /* border-radius: 10px; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    /* box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: rgb(255, 255, 255);
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background: #f857a6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #ff5858, #f857a6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #ff5858, #f857a6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    transform: rotateY(180deg);
+  }

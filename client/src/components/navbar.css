@@ -1,0 +1,9 @@
+.navbar{
+margin: 0;
+  position: absolute;
+  top: 25%;
+}
+
+.menu{
+  box-sizing: 100px 1000px black;
+}
